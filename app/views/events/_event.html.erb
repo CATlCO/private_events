@@ -1,0 +1,10 @@
+<h5><%= link_to event.title, event_path(event) %></h5>
+<p><%= event.description %></p>
+<p><%= event.date %><p>
+<p>
+	<% if event.attendees.any? %>
+		<%= event.attendees %>
+	<% else %>
+		No attendees.
+	<% end %>
+</p>

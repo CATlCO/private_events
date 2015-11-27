@@ -1,0 +1,8 @@
+<h1>Event created by: <%= @event.creator.name %></h1>
+<%= render @event %>
+<p>
+	<%= form_for @event do |f| %>
+		<%= hidden_field_tag :attendee_id, current_user.id %>
+		<%= f.submit "Attend this event" %>
+	<% end %>
+</p>

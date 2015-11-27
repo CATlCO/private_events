@@ -1,0 +1,14 @@
+<h1>Your profile</h1>
+<div>
+	<%= @user.name %>
+</div>
+<h2>Created events</h2>
+<div>
+	<% if @user.events.any? %>
+		<% @user.events.each do |event| %>
+			<%= link_to event.title, event_path(event) %>
+		<% end %>
+	<% else %>
+		You have no created events yet.
+	<% end %>
+</div>
